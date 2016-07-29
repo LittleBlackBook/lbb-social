@@ -1,0 +1,15 @@
+<!-- Sign Up Modal content [step2] -->
+<div ng-init="init()" >
+	<div id="signup-success-modal" class="modal-content" ng-controller="login">
+		<div class="modal-header">
+			<a  ng-click="closeSignup()" class="close icon-close"></a>
+			<h4>SIGN UP SUCCESSFUL</h4>
+		</div>
+		<div class="modal-body text-center">
+      <form method="post" action="#">
+        <h2 class="col-teal">You're all set.</h2>
+        <input type="button" ng-click="signup_close_success()" name="lgs_submit" value="CONTINUE" />
+      </form>
+    </div>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<!-- Sign Up Modal content [step1] -->
+<div ng-init="init()" >
+	<div id="signup-select-view-modal" class="modal-content" ng-controller="login">
+		<div class="modal-header">
+			<a ng-click="close_signup()" class="close icon-close" ></a>
+			<h4>SIGN UP</h4>
+		</div>
+		<div class="modal-body text-center">
+			<form method="post" action="#">
+				<p class="ft14 info">Start your own Little Black Book now</p>
+				<a onclick="checkLoginState(accessFbAndSignup);ga('send','event','SignUp','FacebookClick');" class="btn-fb" id="fb_signup"><i class="fa fa-facebook"></i>&nbsp;&nbsp;Sign up with Facebook</a>
+				<P ng-if="!signupBookmark" class="ft-14 span-text-or">OR</p>
+				<a ng-if="!signupBookmark" ng-click="btn_signupss_form()" onclick="ga('send','event','SignUp','EmailClick')" class="btn-email" id="btn_email"><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;Sign up with Email</a>
+			</form>
+			<p>
+				<br>
+				<a ng-click="btn_loginn()" class="ft-14 get-pwd">ALREADY HAVE AN ACCOUNT? SIGN IN</a>
+			</p>
+		</div>
+	</div>
+</div>

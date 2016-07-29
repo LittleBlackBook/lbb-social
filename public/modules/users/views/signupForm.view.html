@@ -1,0 +1,40 @@
+<!-- Sign Up Modal content [step2] -->
+<div ng-init="init()" >
+	<div id="signup-form-view-modal" class="modal-content" ng-controller="signupFormWithEmail.controller">
+		<div class="modal-header">
+			<a ng-click="close_signup_form()" class="close icon-close"></a>
+			<h4>SIGN UP</h4>
+		</div>
+		<div class="modal-body text-center">
+	    <form ng-submit="lg_submit()" method="post" novalidate>
+				<div class="group-box">
+					<input type="text" id="user_name" ng-model="user_name" name="user_name" value="" placeholder="ENTER YOUR NAME" />
+					<i class="fa fa-user"></i>
+				</div>
+				<p class="error text-right">{{errorName}}</p>
+				<div class="group-box">
+					<input type="email" id="user_email" ng-model="user_email" name="user_email" value="" placeholder="ENTER YOUR EMAIL ADDRESS" />
+					<i class="fa fa-envelope-o"></i>
+				</div>
+				<p id="email_error" class="error text-right">{{errorEmail}}</p>
+				<div class="group-box">
+					<input type="password" class="password" ng-model="user_pwd" name="user_pwd" value="" placeholder="SET PASSWORD" />
+					<a class="view-pwd"><i class="fa fa-eye"></i></a>
+				</div>
+	      <p id="pwd_error" class="error text-right">{{errorPassword}}</p>
+				<p id="all_error" class="error text-right">{{all_error}}</p>
+				<p class="error text-right"  ng-show="errorAlready">Looks like you're already registered. If you'd like to login, please <a ng-click="btn_loginn()">click here</a>.</p>
+				<input type="submit" name="lg_submit" value="SIGN UP" />
+			</form>
+			<div id="loader" class="loader cb-hide"><img src="/wp-content/themes/valenti-child/library/images/loading_spinner.gif"></div>
+		</div>
+	</div>
+	<!-- End Sign Up Modal content [step2] -->
+	<script type="text/javascript">
+	window.form_name='signup';
+	if (window.fb_user) {
+		$("#user_name").val(window.fb_user.name);
+		$("#user_email").val(window.fb_user.email);
+	}
+	</script>
+</div>

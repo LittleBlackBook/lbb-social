@@ -1,0 +1,27 @@
+<!-- Sign Up Modal content [step2] -->
+<div ng-init="init()">
+  <div id="forgot-modal" class="modal-content" ng-controller="login">
+    <div class="modal-header">
+        <a ng-click="lgs_submit()" class="close icon-close"></a>
+        <h4>Added to your LBB</h4>
+    </div>
+    <div class="modal-body text-center">
+        <form method="post" action="#">
+            <h2>All set. Access your LBB on our app</h2>
+            <p class="social-app">
+            <a onclick="ga('send','event','AddToLBB','downloadAndroid');" ng-click="lgs_submit()" href="https://play.google.com/store/apps/details?id=littleblackbook.com.littleblackbook.lbbdapp.lbb" target="_blank"><img src="/wp-content/themes/valenti-child/library/images/google_play1.png"></a>
+            <a onclick="ga('send','event','AddToLBB','downloadiOS');" ng-click="lgs_submit()" href="https://itunes.apple.com/en/app/lbb-your-city-guide/id1041376594" target="_blank"><img src="/wp-content/themes/valenti-child/library/images/app_store1.png"></a>
+            </p>
+			      <p class="ft-14 get-pwd">Web version is coming soon!</p>
+        </form>
+    </div>
+  </div>
+</div>
+<!-- End Sign Up Modal content [step2] -->
+<script type="text/javascript">
+window.form_name='bookmarkSuccess';
+
+$("#bookmark-modal .social-app a").click(function(e) {
+    loginSuccess();
+});
+</script>

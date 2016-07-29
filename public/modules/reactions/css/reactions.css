@@ -1,0 +1,278 @@
+/*reaction action*/
+.border-box{
+	padding: 8px 15px 12px;
+		border-bottom: 2px solid #231f20;;
+		margin-bottom: 4px;
+}
+.reaction-box a,.reaction-list a{
+	cursor: pointer;
+}
+.reaction-box .cb-block-title {
+    font-family: 'BebasNeue-Bold',sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 1.5em;
+    letter-spacing: 3px !important;
+    padding: 8px 15px 12px;
+    margin-bottom: 4px;
+    border-bottom: 2px solid #231f20;
+}
+.react-action{
+	display: table;
+	width: 100%;
+}
+.react-action li{
+	display: table-cell;
+}
+.react-action li:first-child{
+	text-align: left;
+}
+.react-action li:last-child{
+	text-align: right;
+}
+.react-action li:first-child a{
+	display: inline-block;
+}
+.react-action li:first-child a i{
+	margin-right: 4px;
+}
+.react-action li:last-child a i{
+	margin-left: 4px;
+}
+.reaction-box i{
+	vertical-align: middle;
+	/*font-size: 1.857em;*/
+	font-size: 2.714em;
+}
+.react-action .all-reaction,
+.btn-addReaction > span,
+.btn-coosenReaction > span{
+	vertical-align: middle;
+}
+.react-action .btn-addReaction{
+	display: inline-block;
+	/*padding: 5px 6px;*/
+	line-height: 1;
+	cursor: pointer;
+	text-decoration: underline !important;
+}
+.react-action .btn-addReaction:hover,.react-action .btn-addReaction:focus,.react-action .btn-addReaction:visited{
+	text-decoration: underline !important;
+}
+.btn-coosenReaction{
+	display: inline-block;
+	/*padding: 5px 6px;*/
+	line-height: 1;
+	cursor: pointer;
+	text-transform: capitalize;
+}
+.sec-comments{
+	background-color: #f8f8f8;
+	padding: 12px 15px;
+}
+.sec-comments p{
+	color: #9a9a9a !important;
+}
+/*reaction list*/
+.react-overlay{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(35, 31, 32, 0.9);
+	top: 0;
+	left: 0;
+	z-index: 113000;
+	/*display: none; */
+}
+.reaction-list{
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	z-index:112000;
+	transition: visibility 0s 1s, opacity .5s linear;
+	-webkit-transition: visibility 0s 1s, opacity .5s linear;
+	-moz-transition: visibility 0s 1s, opacity .5s linear;
+	-ms-transition: visibility 0s 1s, opacity .5s linear;
+	-o-transition: visibility 0s 1s, opacity .5s linear;
+}
+.reaction-list-active{
+	visibility: visible;
+	opacity: 1;
+	transition: opacity .5s linear;
+	-webkit-transition: opacity .5s linear;
+	-moz-transition: opacity .5s linear;
+	-ms-transition: opacity .5s linear;
+	-o-transition: opacity .5s linear;
+}
+.reaction-list .reactions{
+	position: fixed;
+	z-index: 114000;
+	top: 20%;
+	right: 0px;
+}
+.reaction-list .reactions ul{
+
+}
+.reaction-list .reactions ul li{
+	color: #fff;
+	padding: 8px 20px 8px 0px;
+	text-align: right;
+	text-transform: capitalize;
+	position: relative;
+	opacity: 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.reaction-list .reactions ul.react-option li:nth-child(1){
+	-webkit-transform: translateY(204px);
+	-moz-transform: translateY(204px);
+	-ms-transform: translateY(204px);
+	-o-transform: translateY(204px);
+	transform: translateY(204px);
+}
+.reaction-list .reactions ul.react-option li:nth-child(2){
+	-webkit-transform: translateY(153px);
+	-moz-transform: translateY(153px);
+	-ms-transform: translateY(153px);
+	-o-transform: translateY(153px);
+	transform: translateY(153px);
+}
+.reaction-list .reactions ul.react-option li:nth-child(3){
+	-webkit-transform: translateY(102px);
+	-moz-transform: translateY(102px);
+	-ms-transform: translateY(102px);
+	-o-transform: translateY(102px);
+	transform: translateY(102px);
+}
+.reaction-list .reactions ul.react-option li:nth-child(4){
+	-webkit-transform: translateY(51px);
+	-moz-transform: translateY(51px);
+	-ms-transform: translateY(51px);
+	-o-transform: translateY(51px);
+	transform: translateY(51px);
+}
+
+.reaction-list .reactions ul li i{
+	vertical-align: middle;
+	margin-left: 20px;
+	font-size: 2.714em;
+}
+.reaction-list .reactions ul li i .path1{
+	text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.8);
+}
+.reaction-list-active .reactions ul li{
+	-webkit-transform: translateY(0px) !important;
+  -moz-transform: translateY(0px) !important;
+  -ms-transform: translateY(0px) !important;
+  -o-transform: translateY(0px) !important;
+	transform: translateY(0px) !important;
+	opacity: 1 !important;
+}
+.reaction-list input[type=checkbox]{
+	position: absolute;
+	right: 0px;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	opacity: 0;
+	cursor:pointer;
+}
+.reaction-list input[type=checkbox]#love + span i>.path1:before{
+	color: #b0b0b0;
+}
+.reaction-list input[type=checkbox]#love:checked + span i>.path1:before{
+	color:rgb(224, 71, 95);
+}
+
+.reaction-list input[type=checkbox]#excited + span i>.path1:before{
+	color: #d8d8d8;
+}
+.reaction-list input[type=checkbox]#excited:checked + span i>.path1:before{
+	color: rgb(254, 216, 114);
+}
+.reaction-list input[type=checkbox]#excited + span i>.path2:before{
+	color: #848484;
+}
+.reaction-list input[type=checkbox]#excited:checked + span i>.path2:before{
+	color: rgb(50, 50, 50);
+}
+.reaction-list input[type=checkbox]#excited + span i>.path3:before{
+	color: #afafaf;
+}
+.reaction-list input[type=checkbox]#excited:checked + span i>.path3:before{
+	color: rgb(241, 113, 153);
+}
+.reaction-list input[type=checkbox]#excited + span i>.path4:before,
+.reaction-list input[type=checkbox]#excited + span i>.path5:before,
+.reaction-list input[type=checkbox]#excited + span i>.path7:before,
+.reaction-list input[type=checkbox]#excited + span i>.path8:before{
+	color: #a7a7a7;
+}
+.reaction-list input[type=checkbox]#excited:checked + span i>.path4:before,
+.reaction-list input[type=checkbox]#excited:checked + span i>.path5:before{
+	color: rgb(1, 1, 1);
+}
+.reaction-list input[type=checkbox]#excited:checked + span i>.path7:before,
+.reaction-list input[type=checkbox]#excited:checked + span i>.path8:before{
+	color: rgb(56, 56, 56);
+}
+
+.reaction-list input[type=checkbox]#fail + span i>.path1:before{
+	color: #9b9b9b;
+}
+.reaction-list input[type=checkbox]#fail:checked + span i>.path1:before{
+	color: rgb(135, 86, 46);
+}
+.reaction-list input[type=checkbox]#fail + span i>.path2:before,
+.reaction-list input[type=checkbox]#fail + span i>.path6:before{
+	color: #4b4b4b;
+}
+.reaction-list input[type=checkbox]#fail:checked + span i>.path2:before,
+.reaction-list input[type=checkbox]#fail:checked + span i>.path6:before{
+	color: rgb(39, 35, 36);
+}
+
+.reaction-list input[type=checkbox]#been_there + span i>.path1:before{
+	color: #bdbdbd;
+}
+.reaction-list input[type=checkbox]#been_there + span i>.path2:before{
+	color: #cacaca;
+}
+.reaction-list input[type=checkbox]#been_there:checked + span i>.path1:before,
+.reaction-list input[type=checkbox]#been_there:checked + span i>.path2:before{
+	color: rgb(67, 205, 116);
+}
+
+.reaction-list input[type=checkbox]#bookmark + span i>.path1:before{
+	color: #c7c7c7;
+}
+.reaction-list input[type=checkbox]#bookmark:checked + span i>.path1:before{
+	color: rgb(8, 162, 178);
+}
+/*#rect-list-close i{
+	color: #d1d1d1;
+}
+#rect-list-done i{
+	color: #29ac2c;
+}*/
+/*#rect-list-close i{
+	color: #d1d1d1;
+}
+#rect-list-done i{
+	color: #29ac2c;
+}*/
+#reactBtn.sendrctn .close{
+	display: none;
+}
+#reactBtn.sendrctn .done{
+	display: block;
+}
+#reactBtn .done{
+	display: none;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+#all-reaction{display: none}

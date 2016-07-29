@@ -1,0 +1,32 @@
+<div ng-init="init()">
+  <div id="login-modal" class="modal-content" ng-controller="login">
+    <div class="modal-header">
+      <span  class="close icon-close" ng-click="close()"></span>
+      <h4>LOG IN</h4>
+    </div>
+    <div class="modal-body text-center">
+      <form ng-submit="submitForm()" method="post" novalidate>
+        <p class="info">Welcome back!</p>
+        <a onclick="ga('send','event','Login','FacebookClick');checkLoginState(accessFbAndLogin);" class="btn-fb" id="fb_login"><i class="fa fa-facebook"></i>&nbsp;&nbsp;Log in with Facebook</a>
+        <P class="ft-14">OR</p>
+        <div class="group-box">
+  			<input type="email" id="user_email" ng-model="user_email" name="user_email" value="" placeholder="ENTER REGISTERED EMAIL" />
+          <i class="fa fa-envelope-o"></i>
+        </div>
+        <p class="error text-right">{{errorEmail}}</p>
+        <div class="group-box">
+          <input type="password" class="password" ng-model="user_pwd" id="user_pwd" name="user_pwd" value="" placeholder="ENTER YOUR PASSWORD" />
+          <a class="view-pwd"><i class="fa fa-eye"></i></a>
+        </div>
+        <p class="error text-right">{{errorPassword}}</p>
+        <p class="error text-right">{{errorName}}</p>
+        <input type="submit" id="lg_submit" name="lg_submit" value="LOG IN" />
+      </form>
+      <p><span class="ft-12">I FORGOT MY PASSWORD</span>
+        <br/><a class="ft-14 get-pwd" ng-click="forgot_form()" id="get_pwd">HELP ME GET IT</a>
+      </p>
+      <div id="loader" ng-show = "loading" class="loader"><img src="/wp-content/themes/valenti-child/library/images/loading_spinner.gif"></div>
+    </div>
+  </div>
+</div>
+<!--End Login Modal content -->
